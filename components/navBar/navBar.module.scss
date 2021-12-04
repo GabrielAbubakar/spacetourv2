@@ -1,0 +1,86 @@
+@import '../../styles/sassconfig';
+
+.navigationBar {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    width: 58%;
+    padding-inline: 5rem 6rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(tab-land) {
+        width: 65%;
+        padding-inline: 4rem 4rem;
+    }
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    
+    li {
+        display: inline;
+        border-bottom: 3px solid hsla(0, 0%, 100%, 0);
+        cursor: pointer;
+        font-size: 1rem;
+        list-style: none;
+        padding: 2rem 0 2rem 0;
+
+        @include respond(tab-land) {
+            font-size: .875rem;
+        }
+    }
+
+    // li:not(:last-child) {
+    //     margin-right: 3rem;
+    // }
+
+    li:hover {
+        border-bottom: 3px solid hsl(0, 0%, 100%, .5);
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    span {
+        font-weight: 700;
+        margin-right: 5px;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 64%;
+        height: 1px;
+        background-color: hsl(0, 0%, 100%, .2);
+        position: absolute;
+        top: 50%;
+        left: -60%;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+
+    }
+
+    & .go {
+        display: none;
+    }
+}
+
