@@ -1,7 +1,133 @@
+@import '../styles/sassconfig';
+
 .homeContainer {
     min-width: 100vw;
     min-height: 100vh;
     background-image: url(../public/images/home/background-home-desktop.jpg);
     background-size: cover;
     background-position: center center;
+
+    @include respond(tab-port) {
+        background-image: url(../public/images/home/background-home-tablet.jpg);
+        background-position: bottom bottom;
+    }
+
+    @include respond(phone) {
+        background-image: url(../public/images/home/background-home-mobile.jpg);
+        background-position: bottom bottom;
+    }
+}
+
+.containerFlex {
+    margin-top: 8rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 12rem;
+
+    @include respond(tab-land) {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 9rem;
+        gap: 6rem;
+    }
+
+    @include respond(tab-port) {
+        padding-inline: 2rem;
+    }
+}
+
+.containerFlex * {
+    max-width: 50ch;
+}
+
+.containerFlex h1 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+    color: hsl( var(--clr-light) );
+    letter-spacing: 4.75px;
+
+    @include respond(tab-land) {
+        font-size: 1.25rem;
+    }
+
+    @include respond(tab-land) {
+        font-size: 1rem;
+    }
+    
+}
+
+.containerFlex p {
+    color: hsl( var(--clr-light) );
+    font-family: var(--ff-sans-normal);
+    /* padding-right: 4rem; */
+
+
+    @include respond(tab-land) {
+        font-size: 0.9375rem;
+    }
+}
+
+.containerFlex span {
+    display: block;
+    font-size: 9.375rem;
+    font-family: var(--ff-serif);
+    color: hsl( var(--clr-white) );
+
+    @include respond(tab-land) {
+        font-size: 8.5rem;
+    }
+
+    @include respond(phone) {
+        font-size: 5rem;
+    }
+}
+
+.exploreButton {
+    align-self: flex-end;
+
+    @include respond(tab-land) {
+        align-self: center;
+    }
+}
+
+.exploreButton a {
+    font-size: 1.9rem;
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+    background-color: hsl( var(--clr-white) );
+    color: hsl( var(--clr-dark) );
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+
+    @include respond(phone) {
+        font-size: 1.25rem;
+    }
+}
+
+.exploreButton a::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.exploreButton a:hover::after,
+.exploreButton a:active::after {
+    opacity: 1;
+    transform: scale(1.5);
 }

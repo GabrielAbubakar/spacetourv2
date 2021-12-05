@@ -12,10 +12,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
 
 body {
+    font-family: var(--ff-sans-normal);
     min-width: 100vw;
     min-height: 100vh;
+    color: hsl(0, 0%, 100%);
+    line-height: 1.3;
 }
 
 #__next {

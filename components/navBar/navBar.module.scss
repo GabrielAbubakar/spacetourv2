@@ -6,6 +6,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include respond(tab-port) {
+        padding-left: 1.4rem;
+    }
+
+    & .logo {
+        
+        @include respond(phone) {
+            width: 40px;
+            height: 40px;
+        }
+
+    }
 }
 
 .navigation {

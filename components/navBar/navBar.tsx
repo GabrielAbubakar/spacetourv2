@@ -9,7 +9,10 @@ const Navigation: NextPage = () => {
     return (
         <nav className={styles.navigationBar}>
 
-            <Image src="/images/shared/logo.svg" width={48} height={48} alt="main logo"/>
+            <div className={styles.logo}>
+                <Image src="/images/shared/logo.svg" width={48} height={48} alt="main logo" />
+            </div>
+
 
             <ul className={styles.navigation}>
                 <li>
