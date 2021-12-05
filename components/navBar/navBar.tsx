@@ -24,7 +24,7 @@ const Navigation: NextPage = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/destination">
                         <a>
                             <span>01</span>
                             Destination
@@ -32,7 +32,7 @@ const Navigation: NextPage = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/crew">
                         <a>
                             <span>02</span>
                             Crew
@@ -40,7 +40,7 @@ const Navigation: NextPage = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/technology">
                         <a>
                             <span>03</span>
                             Technology

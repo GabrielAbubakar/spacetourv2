@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
     return (
+        
         <div className={styles.homeContainer}>
 
             <Navigation />
@@ -23,8 +24,8 @@ const Home: NextPage = () => {
                     <a href="#">Explore</a>
                 </div>
 
-        </div>
-                
+            </div>
+
         </div>
     )
 }
