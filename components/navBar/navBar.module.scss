@@ -34,7 +34,7 @@
 
     @include respond(tab-land) {
         width: 65%;
-        padding-inline: 4rem 4rem;
+        padding-inline: 3rem 3rem;
     }
 
     @include respond(tab-port) {
