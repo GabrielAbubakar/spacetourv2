@@ -26,10 +26,12 @@
     text-transform: uppercase;
     letter-spacing: 2.7px;
     background: rgba(255, 255, 255, 0.04);
+    background: hsl( var(--clr-white) / 0.05);
     backdrop-filter: blur(81.5485px);
     width: 58%;
     padding-inline: 5rem 6rem;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
 
     @include respond(tab-land) {
