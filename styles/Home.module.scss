@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center center;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         background-image: url(../public/images/home/background-home-tablet.jpg);
         background-position: bottom bottom;
     }
@@ -23,7 +23,9 @@
     /* text-align: center; */
     display: flex;
     justify-content: space-between;
-    padding-inline: 12rem;
+    padding-inline: 10rem;
+    gap: 4rem;
+
 
     @include respond(tab-land) {
         flex-direction: column;
