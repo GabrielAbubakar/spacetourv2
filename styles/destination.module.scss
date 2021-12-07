@@ -22,6 +22,8 @@
     padding-inline: 10rem;
     padding-bottom: 4rem;
     margin-top: 5rem;
+    max-width: 1440px;
+    margin-inline: auto;
 
     @include respond(tab-land) {
         padding-inline: 6rem;
@@ -50,6 +52,7 @@
         @include respond(phone) {
             text-align: center;
             font-size: 1rem;
+            margin-bottom: 2.5rem;
         }
     }
 
@@ -74,12 +77,16 @@
     }
 }
 
-// .pictureBox {
+.pictureBox {
 
-//     @include respond(tab-port) {
-//         flex: .7;
-//     }
-// }
+    @include respond(tab-port) {
+        width: 300px;
+    }
+
+    @include respond(phone) {
+        width: 250px;
+    }
+}
 
 .destinationText {
     flex: 1;
