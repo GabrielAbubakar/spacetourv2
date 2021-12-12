@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Navigation from '../components/navBar/navBar'
 import styles from '../styles/Home.module.scss'
 
@@ -21,7 +22,9 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className={styles.exploreButton}>
-                    <a href="#">Explore</a>
+                    <Link href="/destination" >
+                        <a>Explore</a>
+                    </Link>
                 </div>
 
             </div>

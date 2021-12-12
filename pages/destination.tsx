@@ -33,7 +33,9 @@ const Destination: NextPage = () => {
                 <article>
 
                     <figure className={styles.pictureBox}>
-                        <Image src='/images/destination/image-moon.png' width={445} height={445} />
+                        <div>
+                            <Image src='/images/destination/image-moon.png' width={445} height={445} />
+                        </div>
                     </figure>
 
                     <div className={styles.destinationText}>

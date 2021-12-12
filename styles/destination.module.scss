@@ -81,6 +81,7 @@
 .pictureBox {
     margin-top: 4rem;
     min-width: 50%;
+    
 
     @include respond(tab-port) {
         width: 300px;
@@ -89,6 +90,10 @@
 
     @include respond(phone) {
         width: 250px;
+    }
+
+    & > * > * > * {
+        animation: rotation 100s infinite linear;
     }
 }
 
@@ -197,3 +202,12 @@
         }
     }
 }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
