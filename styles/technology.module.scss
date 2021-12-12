@@ -89,6 +89,7 @@
     
     @include respond(tab-port) {
         flex-direction: row;
+        order: 2;
     }
     
     @include respond(phone) {
@@ -136,6 +137,7 @@
     @include respond(tab-port) {
         text-align: center;
         padding-inline: 5rem;
+        order: 3;
     }
     
     @include respond(phone) {
@@ -192,10 +194,17 @@
 
 .pictureBox {
     flex: 1;
+    text-align: center;
 
     
     @include respond(tab-port) {
-        display: none;
+        //display: none;
+        order: 1;
+        height: 310px;
+    }
+
+    @include respond(phone) {
+        height: 200px;
     }
 }
 
@@ -205,13 +214,13 @@
     background-position: center center;
     display: none;
 
-    @include respond(tab-port) {
-        display: block;
-        height: 310px;
-    }
+    // @include respond(tab-port) {
+    //     display: block;
+    //     height: 310px;
+    // }
 
-    @include respond(phone) {
-        height: 200px;
-    }
+    // @include respond(phone) {
+    //     height: 200px;
+    // }
 
 }
