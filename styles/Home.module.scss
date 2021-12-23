@@ -10,11 +10,13 @@
     @include respond(tab-land) {
         background-image: url(../public/images/home/background-home-tablet.jpg);
         background-position: bottom bottom;
+        padding-bottom: 3rem;
     }
 
     @include respond(phone) {
         background-image: url(../public/images/home/background-home-mobile.jpg);
         background-position: bottom bottom;
+        padding-bottom: 3rem;
     }
 }
 
