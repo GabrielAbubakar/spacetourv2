@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -34,7 +35,7 @@ const Destination: NextPage = () => {
 
                     <figure className={styles.pictureBox}>
                         <div>
-                            <Image src='/images/destination/image-moon.png' width={445} height={445} />
+                            <Image src='/images/destination/image-moon.png' width={445} height={445} alt="destination"/>
                         </div>
                     </figure>
 

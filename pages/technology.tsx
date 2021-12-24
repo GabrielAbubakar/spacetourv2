@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -52,7 +53,7 @@ const Technology: NextPage = () => {
 
                     </div>
                     <figure className={styles.pictureBox}>
-                        <Image src='/images/technology/image-launch-vehicle-portrait.jpg' width={515} height={523}/>
+                        <Image src='/images/technology/image-launch-vehicle-portrait.jpg' width={515} height={523} alt="technology"/>
                     </figure>
                 </article>
 
