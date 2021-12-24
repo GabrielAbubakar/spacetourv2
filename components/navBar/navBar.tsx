@@ -2,15 +2,34 @@ import { NextPage } from "next";
 import Link from "next/link";
 import Image from 'next/image'
 import styles from './navBar.module.scss'
+import ham from '../../public/images/shared/icon-hamburger.svg'
+import { useState } from "react";
+
 
 
 const Navigation: NextPage = () => {
+
+    const [tabOpen, setTabOpen] = useState(false);
+
+    const handleShit = () => {
+
+        if (tabOpen === false) {
+            setTabOpen(true)
+        } else {
+            setTabOpen(false)
+        }
+        console.log(tabOpen);
+    }
 
     return (
         <nav className={styles.navigationBar}>
 
             <div className={styles.logo}>
-                <Image src="/images/shared/logo.svg" width={48} height={48} alt="main logo" />
+                <Link href="/">
+                    <a>
+                        <Image src="/images/shared/logo.svg" width={48} height={48} alt="main logo" />
+                    </a>
+                </Link>
             </div>
 
 
@@ -49,9 +68,9 @@ const Navigation: NextPage = () => {
                 </li>
             </ul>
 
-            {/* <div className={styles.go} >
-                <Image src="/images/shared/icon-hamburger.svg" height={24} width={21} className={styles.god}/>
-            </div> */}
+            <div className={styles.hamburger} onClick={handleShit}>
+                <Image src="/images/shared/icon-hamburger.svg" height={24} width={30} className={styles.god} alt="hamburger "/>
+            </div>
         </nav>
     )
 }

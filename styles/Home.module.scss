@@ -10,18 +10,16 @@
     @include respond(tab-land) {
         background-image: url(../public/images/home/background-home-tablet.jpg);
         background-position: bottom bottom;
-        padding-bottom: 3rem;
     }
 
     @include respond(phone) {
         background-image: url(../public/images/home/background-home-mobile.jpg);
         background-position: bottom bottom;
-        padding-bottom: 3rem;
     }
 }
 
 .containerFlex {
-    margin-top: 8rem;
+    margin-top: 15rem;
     /* text-align: center; */
     display: flex;
     justify-content: space-between;
@@ -108,7 +106,7 @@
 }
 
 .exploreButton a {
-    font-size: 1.9rem;
+    font-size: 2rem;
     position: relative;
     z-index: 1;
     display: inline-grid;

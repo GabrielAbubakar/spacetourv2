@@ -89,118 +89,138 @@
     }
 }
 
-.crewText {
-    align-self: center;
-    margin-top: 7rem;
+.button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: hsl( var(--clr-white) / .25); 
+    transition: all .2s ease;
 
-    
-    @include respond(tab-land) {
-        margin-top: 5rem;
-    }
-    
-    @include respond(tab-port) {
-        margin-top: 0;
-    }
-
-    @include respond(phone) {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-    }
-
-    h2 {
-        color: hsl( var(--clr-white) / .5);
-        line-height: 1.1;
-        font-size: 2rem;
-        text-transform: uppercase;
-        font-family: var(--ff-serif);
-
-        @include respond(tab-port) {
-            font-size: 1.5rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1rem;
-            order: 2;
-        }
-    }
-    
-        h3 {
-            font-size: 3.5rem;
-            font-family: var(--ff-serif);
-            line-height: 1.1;
-            text-transform: uppercase;
-            margin-top: .7rem;
-
-            @include respond(tab-port) {
-                font-size: 2.5rem;
-            }
-
-            @include respond(phone) {
-                font-size: 1.5rem;
-                order: 3;
-
-            }
-        }
-
-    p {
-       max-width: 50ch;
-       font-size: 1.125rem;
-       color: hsl( var(--clr-light ) );
-       margin-top: 1rem;
-       margin-bottom: 6rem;
-
-       @include respond(tab-port) {
-        font-size: 1rem;
-        margin-bottom: 3rem;
-       }
-
-       @include respond(phone) {
-        font-size: 0.9375rem;
-        order: 4;
-        margin-bottom: 8rem;
-       }
-
+    &:hover {
+        background-color: hsl( var(--clr-white) / .5);
+        transform: scale(1.1);
     }
 }
 
-.pictureBox {
-    max-width: 60%;
-    align-self: center;
+.active {
+    background-color: hsl( var(--clr-white) / .5);
+    transform: scale(1.1);
+}
 
-    // & > * {
-    //     min-height: 100%;
-    // }
+// .crewText {
+//     align-self: center;
+//     margin-top: 7rem;
+
     
-    @include respond(phone) {
-        order: 1;
-        border-bottom: 1px solid hsl( var(--clr-white) / .1);
-    }
-}
+//     @include respond(tab-land) {
+//         margin-top: 5rem;
+//     }
+    
+//     @include respond(tab-port) {
+//         margin-top: 0;
+//     }
 
-.buttons {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+//     @include respond(phone) {
+//         order: 2;
+//         display: flex;
+//         flex-direction: column;
+//     }
 
-    @include respond(tab-port) {
-        justify-content: center;
-    }
+//     h2 {
+//         color: hsl( var(--clr-white) / .5);
+//         line-height: 1.1;
+//         font-size: 2rem;
+//         text-transform: uppercase;
+//         font-family: var(--ff-serif);
 
-    @include respond(phone) {
-        order: 1;
+//         @include respond(tab-port) {
+//             font-size: 1.5rem;
+//         }
 
-    }
+//         @include respond(phone) {
+//             font-size: 1rem;
+//             order: 2;
+//         }
+//     }
+    
+//         h3 {
+//             font-size: 3.5rem;
+//             font-family: var(--ff-serif);
+//             line-height: 1.1;
+//             text-transform: uppercase;
+//             margin-top: .7rem;
 
-    & > * {
-        cursor: pointer;
-        border: 0;
-        border-radius: 50%;
-        padding: 0.5rem;
-        background-color: hsl( var(--clr-white) / .25); 
+//             @include respond(tab-port) {
+//                 font-size: 2.5rem;
+//             }
 
-        &:hover {
-            background-color: hsl( var(--clr-white) / .5);
-        }
-    }
-}
+//             @include respond(phone) {
+//                 font-size: 1.5rem;
+//                 order: 3;
+
+//             }
+//         }
+
+//     p {
+//        max-width: 50ch;
+//        font-size: 1.125rem;
+//        color: hsl( var(--clr-light ) );
+//        margin-top: 1rem;
+//        margin-bottom: 6rem;
+
+//        @include respond(tab-port) {
+//         font-size: 1rem;
+//         margin-bottom: 3rem;
+//        }
+
+//        @include respond(phone) {
+//         font-size: 0.9375rem;
+//         order: 4;
+//         margin-bottom: 8rem;
+//        }
+
+//     }
+// }
+
+// .pictureBox {
+//     max-width: 60%;
+//     align-self: center;
+
+//     // & > * {
+//     //     min-height: 100%;
+//     // }
+    
+//     @include respond(phone) {
+//         order: 1;
+//         border-bottom: 1px solid hsl( var(--clr-white) / .1);
+//     }
+// }
+
+// .buttons {
+//     display: flex;
+//     gap: 1rem;
+//     margin-bottom: 2rem;
+
+//     @include respond(tab-port) {
+//         justify-content: center;
+//     }
+
+//     @include respond(phone) {
+//         order: 1;
+
+//     }
+
+//     & > * {
+//         cursor: pointer;
+//         border: 0;
+//         border-radius: 50%;
+//         padding: 0.5rem;
+//         background-color: hsl( var(--clr-white) / .25); 
+
+//         &:hover {
+//             background-color: hsl( var(--clr-white) / .5);
+//         }
+//     }
+// }
+
