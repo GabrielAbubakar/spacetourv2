@@ -68,9 +68,40 @@ const Navigation: NextPage = () => {
                 </li>
             </ul>
 
+            
+            {/* Hamburger */}
             <div className={styles.hamburger} onClick={handleShit}>
-                <Image src="/images/shared/icon-hamburger.svg" height={24} width={30} className={styles.god} alt="hamburger "/>
+                {/* <Image src="/images/shared/icon-hamburger.svg" height={24} width={30} className={styles.god} alt="hamburger "/> */}
+                <Image src={tabOpen === false ? "/images/shared/icon-hamburger.svg" : "/images/shared/icon-close.svg"} 
+                        height={28} 
+                        width={28} 
+                        className={styles.god} 
+                        alt="hamburger "/>
             </div>
+
+            {/* Mobile Navigation */}
+            <ul className={tabOpen === true ? `${styles.navigationMobile} ${styles.flex}` : `${styles.navigationMobile}`}>
+                <li>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/destination">
+                        <a>Destination</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/crew">
+                        <a>Crew</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/technology">
+                        <a>Technology</a>
+                    </Link>
+                </li>
+            </ul>
         </nav>
     )
 }
